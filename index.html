@@ -8,6 +8,11 @@
     content="Интерактивный брендбук: смысловая платформа, визуальная система и носители бренда." />
   <title>Интерактивный брендбук</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -48,11 +53,10 @@
         <a href="#logo-misuse">Ошибки использования</a>
         <a href="#colors">Цветовая палитра</a>
         <a href="#typography">Типографика</a>
-        <a href="#graphics">Паттерны и иллюстрации</a>
-        <a href="#graphics">Иконографика</a>
-        <a href="#graphics">Фотостиль и текстуры</a>
-        <a href="#graphics">Кобрендинг</a>
-        <a href="#uikit">UI Kit</a>
+        <a href="#graphics">Фирменная графика</a>
+        <a href="#pictograms">Пиктограммы</a>
+        <a href="#photo-style">Фотостиль</a>
+        <a href="#ui-kit">UI Kit</a>
       </div>
 
       <div class="toc-group">
@@ -642,246 +646,937 @@
       <div class="section-head">
         <div>
           <div class="eyebrow">Цветовая палитра</div>
-          <h2 id="colorsTitle">Наведите на цвет для характеристик, кликните — чтобы скопировать HEX</h2>
+          <h2 id="colorsTitle">Основная палитра</h2>
+          <p>Основная цветовая палитра является ключевым элементом визуальной идентичности бренда и используется во всех
+            коммуникациях. Дополнительные цвета не предусмотрены. Визуальное разнообразие достигается за счёт
+            композиции, типографики и графических элементов.</p>
         </div>
-        <p id="copyStatus" role="status" aria-live="polite">Код появится после клика.</p>
       </div>
-      <div class="palette" aria-label="Интерактивная палитра цветов">
-        <button class="swatch" style="--c:#5865F2" data-hex="#5865F2">
-          <span class="swatch-name">Blurple</span><b>#5865F2</b>
-          <span class="swatch-panel"><strong>Pantone:</strong> 2726 C<br><strong>CMYK:</strong> 68 62 0
-            0<br><strong>RGB:</strong> 88 101 242<br><strong>HEX:</strong> #5865F2</span>
-        </button>
-        <button class="swatch light" style="--c:#E0E3FF" data-hex="#E0E3FF">
-          <span class="swatch-name">Light Blurple</span><b>#E0E3FF</b>
-          <span class="swatch-panel"><strong>Pantone:</strong> 2706 C<br><strong>CMYK:</strong> 10 9 0
-            0<br><strong>RGB:</strong> 224 227 255<br><strong>HEX:</strong> #E0E3FF</span>
-        </button>
-        <button class="swatch" style="--c:#000000" data-hex="#000000">
-          <span class="swatch-name">Black</span><b>#000000</b>
-          <span class="swatch-panel"><strong>Pantone:</strong> Black 6 C<br><strong>CMYK:</strong> 0 0 0
-            100<br><strong>RGB:</strong> 0 0 0<br><strong>HEX:</strong> #000000</span>
-        </button>
-        <button class="swatch light" style="--c:#F3F4F6" data-hex="#F3F4F6">
-          <span class="swatch-name">Surface</span><b>#F3F4F6</b>
-          <span class="swatch-panel"><strong>Pantone:</strong> Cool Gray 1 C<br><strong>CMYK:</strong> 3 2 2
-            0<br><strong>RGB:</strong> 243 244 246<br><strong>HEX:</strong> #F3F4F6</span>
-        </button>
-      </div>
-    </section>
-
-    <section class="screen section-grid" id="typography" aria-labelledby="typeTitle">
-      <div>
-        <div class="eyebrow">Типографика</div>
-        <h2 id="typeTitle">Живая настройка кегля</h2>
-        <p>Измените размер текста ползунком — это интерактивный прототип правил набора.</p>
-        <label class="range-label">Размер: <span id="fontSizeValue">48</span>px <input id="fontRange" type="range"
-            min="28" max="84" value="48" /></label>
-      </div>
-      <div class="type-demo">
-        <p id="typePreview">Бренд говорит ясно, уверенно и человечно.</p><small>H1: 64/72 · H2: 48/56 · Body: 18/28 ·
-          Caption: 14/20</small>
-      </div>
-    </section>
-
-    <section class="screen section-grid" id="graphics" aria-labelledby="graphicsTitle">
-      <div>
-        <div class="eyebrow">Дополнительная графика</div>
-        <h2 id="graphicsTitle">Паттерны, иконки, фотостиль</h2>
-        <p>Карточки показывают принципы визуального языка. На всех карточках есть hover-эффекты.</p>
-      </div>
-      <div class="cards graphics-cards">
-        <article class="card pattern">
-          <h3>Паттерн</h3>
-          <p>Повторяющийся элемент для фонов и упаковки.</p>
+      <div class="palette">
+        <article class="color-card" style="--c:#FF7C33">
+          <div class="color-preview"></div>
+          <div class="color-info">
+            <p>Pantone 717</p>
+            <p>CMYK 0, 51,80, 0</p>
+            <p>HEX #FF7C33</p>
+            <p>RGB 255 124 51</p>
+            <button class="copy-color" data-hex="#FF7C33">Копировать</button>
+          </div>
         </article>
-        <article class="card">
-          <h3>Иконки</h3>
-          <p>Линейные, простые, с одинаковой толщиной штриха.</p>
+
+        <article class="color-card" style="--c:#FFFFFF">
+          <div class="color-preview"></div>
+          <div class="color-info">
+            <p>Pantone -</p>
+            <p>CMYK 0, 0, 0, 0</p>
+            <p>HEX #FFFFFF</p>
+            <p>RGB 255 255 255</p>
+            <button class="copy-color" data-hex="#FFFFFF">Копировать</button>
+          </div>
         </article>
-        <article class="card photo">
-          <h3>Фотостиль</h3>
-          <p>Естественный свет, крупные планы, чистая композиция.</p>
+
+        <article class="color-card" style="--c:#111111">
+          <div class="color-preview"></div>
+          <div class="color-info">
+            <p>Pantone -</p>
+            <p>CMYK 0, 0,0 ,93</p>
+            <p>HEX #111111</p>
+            <p>RGB 17 17 17</p>
+            <button class="copy-color" data-hex="#111111">Копировать</button>
+          </div>
+        </article>
+
+        <article class="color-card" style="--c:#000000">
+          <div class="color-preview"></div>
+          <div class="color-info">
+            <p>Pantone -</p>
+            <p>CMYK 0, 0, 0, 0</p>
+            <p>HEX #000000</p>
+            <p>RGB 0 0 0</p>
+            <button class="copy-color" data-hex="#000000">Копировать</button>
+          </div>
         </article>
       </div>
     </section>
 
+    <section class="screen typography-screen" id="typography" aria-labelledby="typeTitle">
+      <div class="eyebrow">Визуальная система | Типографика</div>
+      <h2 id="typeTitle">Типографика</h2>
 
-    <section class="screen ui-kit-screen" id="uikit" aria-labelledby="uiKitTitle">
-      <div class="ui-kit-head">
-        <div>
-          <div class="eyebrow">Визуальная система / UI Kit</div>
-          <h2 id="uiKitTitle">UI Kit основного сайта</h2>
-          <p>Компоненты повторяют систему VKR-сайта: фон #F3F3F3, карточки #FFFFFF, тёмные блоки #111111, акцент #FF7F30
-            / #FA4D0B, pill-кнопки высотой 58 px и крупная типографика Inter + Onder.</p>
+      <div class="type-card">
+        <div class="type-tabs">
+          <button class="type-tab is-active" data-font-tab="onder">Onder</button>
+          <button class="type-tab" data-font-tab="inter">Inter</button>
         </div>
-        <button class="button" data-modal="uiRulesModal" type="button">Правила UI</button>
+
+        <div class="type-layout" data-type-panel="onder">
+          <div class="type-controls">
+            <div class="type-sliders two">
+              <label>
+                <span>Размер</span>
+                <input id="onderSize" type="range" min="12" max="36" value="42">
+              </label>
+
+              <label>
+                <span>Интерлиньяж</span>
+                <input id="onderLine" type="range" min="1.5" max="1.9" step="0.05" value="1.5">
+              </label>
+            </div>
+
+            <div class="type-preview-box">
+              <span>Заголовок</span>
+              <p id="onderPreview">ПРИМЕР ЗАГОЛОВКА</p>
+            </div>
+          </div>
+
+          <aside class="type-description">
+            <p>Шрифт Onder используется в качестве заголовков внешних и внутренних носителей.</p>
+            <p>Шрифт используется в единственном доступном начертании - Regular.</p>
+            <p>Минимальный кегль для печати - 12 pt, для экрана - 12 px.</p>
+          </aside>
+        </div>
+
+        <div class="type-layout" data-type-panel="inter" hidden>
+          <div class="type-controls">
+            <div class="type-sliders three">
+              <label>
+                <span>Размер</span>
+                <input id="interSize" type="range" min="14" max="44" value="26">
+              </label>
+
+              <label>
+                <span>Интерлиньяж</span>
+                <input id="interLine" type="range" min="1" max="1.8" step="0.05" value="1.2">
+              </label>
+
+              <label>
+                <span>Вес</span>
+                <input id="interWeight" type="range" min="400" max="700" step="100" value="400">
+              </label>
+            </div>
+
+            <div class="type-preview-box">
+              <span>Текст</span>
+              <p id="interPreview">Пример набора текста</p>
+              <small>Вес<br><b id="interWeightValue">400</b></small>
+            </div>
+          </div>
+
+          <aside class="type-description">
+            <p>Шрифт Inter используется в качестве наборного текста внешних и внутренних носителей.</p>
+            <p>Шрифт используется в начертаниях - Regular, Medium, SemiBold, Bold.</p>
+            <p>Минимальный кегль для печати - 10 pt, для экрана — 14 px.</p>
+          </aside>
+        </div>
       </div>
+    </section>
 
-      <div class="ui-kit-grid ui-kit-grid--full">
-        <article class="ui-panel ui-panel--wide ui-buttons-panel">
-          <span class="ui-label">Кнопки</span>
-          <h3>Основные действия</h3>
-          <p>На сайте используется составная кнопка: текстовая pill-часть + круглая иконка. Высота 58 px, радиус 999 px,
-            текст 24 px / 600.</p>
-          <div class="ui-row">
-            <button class="site-button site-button--orange" type="button"><span>Записаться</span><i>↗</i></button>
-            <button class="site-button site-button--black" type="button"><span>Подробнее</span><i>→</i></button>
-            <button class="site-button site-button--white" type="button"><span>Выбрать</span><i>↗</i></button>
-          </div>
-          <dl class="ui-specs">
-            <div>
-              <dt>Default</dt>
-              <dd>#FF7F30 / #000000 / #FFFFFF</dd>
-            </div>
-            <div>
-              <dt>Hover</dt>
-              <dd>#FF7F30 для чёрной и белой кнопки, #E33F00 для submit</dd>
-            </div>
-            <div>
-              <dt>Active</dt>
-              <dd>#FA4D0B или scale(0.97) на карточной кнопке</dd>
-            </div>
-            <div>
-              <dt>Disabled</dt>
-              <dd>#CCCCCC, cursor not-allowed, без тени и transform</dd>
-            </div>
-          </dl>
-        </article>
+    <section class="screen graphics-screen" id="graphics" aria-labelledby="graphicsTitle">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2 id="graphicsTitle">Графические элементы</h2>
 
-        <article class="ui-panel ui-form-panel">
-          <span class="ui-label">Поля ввода</span>
-          <h3>Форма заявки</h3>
-          <p>Поля повторяют форму сайта: высота 58 px, обводка #CFCFCF, плейсхолдер #BDBDBD, focus-обводка #F58220.</p>
-          <div class="form-demo-card">
-            <h4>Запишитесь на пробное занятие</h4>
-            <label class="field-label">Имя
-              <input class="site-input" type="text" placeholder="Ваше имя" />
-            </label>
-            <label class="field-label">Телефон
-              <input class="site-input" type="tel" placeholder="+7 (___) ___-__-__" />
-            </label>
-            <button class="trial-submit" type="button">Отправить</button>
-            <label class="check-demo"><input type="checkbox" checked><span></span><b>Согласие на обработку
-                данных</b></label>
-          </div>
-        </article>
+      <div class="graphics-card graphics-intro">
+        <div class="graphics-visual">
+          <img src="assets/images/graphic_element.png" alt="Графический элемент">
+        </div>
 
-        <article class="ui-panel ui-card-panel">
-          <span class="ui-label">Карточки</span>
-          <h3>Абонемент</h3>
-          <p>Карточки бывают светлые и тёмные, радиус 24 px, padding 32 px. Внутри — крупное название, список, цена и
-            кнопка.</p>
-          <div class="membership-card-demo membership-card-demo--dark">
-            <h4>Пробная <strong>тренировка</strong></h4>
-            <ul>
-              <li><span></span>Персональный подбор нагрузки</li>
-              <li><span></span>60 минут с тренером</li>
-              <li><span></span>Доступ в зал</li>
-            </ul>
-            <div class="membership-card-demo__bottom">
-              <p><strong>0 ₽</strong><em>/ первое занятие</em></p>
-              <button class="site-button site-button--white" type="button"><span>Выбрать</span><i>↗</i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="ui-panel">
-          <span class="ui-label">Навигация</span>
-          <h3>Табы и фильтры</h3>
-          <p>Для переключателей используется белая pill-плашка с внутренним отступом 8 px. Активный пункт — оранжевый.
+        <div class="graphics-text">
+          <p>Графический элемент представляет собой визуальный импульс, символизирующий движение, энергию и постоянное
+            развитие. Он отражает динамичный характер бренда «В теме» и усиливает ощущение активности и вовлечённости.
           </p>
-          <div class="tabs-demo" role="tablist" aria-label="Пример табов сайта">
-            <button class="is-active" type="button">Все</button>
-            <button type="button">Тренировки</button>
-            <button type="button">Абонементы</button>
-            <button type="button">Тренеры</button>
-          </div>
-          <div class="filter-demo">
-            <button type="button">←</button>
-            <button type="button">→</button>
-          </div>
-        </article>
-
-        <article class="ui-panel">
-          <span class="ui-label">Чекбоксы</span>
-          <h3>Согласия и настройки</h3>
-          <p>Чекбокс 29×29 px, радиус 8 px. Неактивный фон #D9D9D9, выбранное состояние — #FF7F30 с белой галочкой.</p>
-          <div class="checkbox-stack">
-            <label class="check-demo"><input type="checkbox"><span></span><b>Обычное состояние</b></label>
-            <label class="check-demo"><input type="checkbox" checked><span></span><b>Выбранное состояние</b></label>
-            <label class="check-demo is-disabled"><input type="checkbox" disabled><span></span><b>Недоступно</b></label>
-          </div>
-        </article>
-
-        <article class="ui-panel ui-state-panel" id="uiStateCard">
-          <span class="ui-label">Состояния</span>
-          <h3>Default / hover / active / disabled</h3>
-          <div class="state-preview" tabindex="0">
-            <b id="uiStateTitle">Наведите или нажмите</b>
-            <small id="uiStateText">default</small>
-          </div>
-          <div class="state-controls" aria-label="Переключение состояния компонента">
-            <button type="button" data-ui-state="default">Default</button>
-            <button type="button" data-ui-state="hover">Hover</button>
-            <button type="button" data-ui-state="active">Active</button>
-            <button type="button" data-ui-state="disabled">Disabled</button>
-          </div>
-        </article>
-
-        <article class="ui-panel ui-panel--wide">
-          <span class="ui-label">Токены интерфейса</span>
-          <h3>Цвета, типографика, сетка</h3>
-          <div class="tokens-grid">
-            <div><b style="--token:#F3F3F3"></b><strong>Background</strong><small>#F3F3F3</small></div>
-            <div><b style="--token:#FFFFFF"></b><strong>Surface</strong><small>#FFFFFF</small></div>
-            <div><b style="--token:#111111"></b><strong>Dark</strong><small>#111111</small></div>
-            <div><b style="--token:#FF7F30"></b><strong>Accent</strong><small>#FF7F30</small></div>
-            <div><b style="--token:#FA4D0B"></b><strong>Active</strong><small>#FA4D0B</small></div>
-            <div><b style="--token:#CFCFCF"></b><strong>Line</strong><small>#CFCFCF</small></div>
-          </div>
-          <dl class="ui-specs ui-specs--columns">
-            <div>
-              <dt>Шрифты</dt>
-              <dd>Onder — заголовки, Inter — интерфейс и основной текст.</dd>
-            </div>
-            <div>
-              <dt>Радиусы</dt>
-              <dd>24 px для карточек, 29/999 px для кнопок и полей.</dd>
-            </div>
-            <div>
-              <dt>Контейнер</dt>
-              <dd>max-width 1600 px, боковые поля 24 px на мобильных.</dd>
-            </div>
-            <div>
-              <dt>Переходы</dt>
-              <dd>0.25–0.28s ease для hover, focus и active.</dd>
-            </div>
-          </dl>
-        </article>
+          <p>Элемент формирует визуальный ритм коммуникации
+            и используется как выразительный акцент, поддерживающий общий стиль бренда.</p>
+          <p>Элемент может применяться в различных масштабах и композициях, выступая как фоновый или акцентный
+            графический приём.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="screen section-grid" id="carriers" aria-labelledby="carriersTitle">
+    <section class="screen graphics-screen" id="graphics-variants" aria-labelledby="graphicsVariantsTitle">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2 id="graphicsVariantsTitle">Варианты использования</h2>
+
+      <div class="graphics-card">
+        <div class="graphics-tabs" data-graphic-tabs>
+          <button class="graphic-tab is-active" data-graphic="orange">Фирменный цвет</button>
+          <button class="graphic-tab" data-graphic="white">Белый цвет</button>
+          <button class="graphic-tab" data-graphic="outline">Контурный вид</button>
+        </div>
+
+        <div class="graphics-preview">
+          <img id="graphicPreview" src="assets/images/graphic_element.png" alt="Вариант графического элемента">
+        </div>
+      </div>
+    </section>
+
+    <section class="screen graphics-screen" id="graphics-rules" aria-labelledby="graphicsRulesTitle">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2 id="graphicsRulesTitle">Правила использования графического элемента</h2>
+
+      <div class="graphics-card graphics-rules">
+        <div class="graphics-rules-image">
+          <img src="assets/images/rules.png" alt="Графический элемент в макете">
+        </div>
+
+        <div class="graphics-rules-list">
+          <div class="graphics-rule">
+            <h4>Масштаб и композиция</h4>
+            <p>Размещать элемент с учётом формата макета, сохраняя пропорции.</p>
+          </div>
+
+          <div class="graphics-rule">
+            <h4>Поворот и ориентация</h4>
+            <p>Допускается вращение элемента для достижения композиционного баланса.</p>
+          </div>
+
+          <div class="graphics-rule">
+            <h4>Кадрирование</h4>
+            <p>Разрешается вывод элемента за границы макета с обрезкой по краям.</p>
+          </div>
+
+          <div class="graphics-rule">
+            <h4>Цветовые решения</h4>
+            <p>Использовать фирменный цвет, белый или контурный вариант.</p>
+          </div>
+
+          <div class="graphics-rule">
+            <h4>Роль в композиции</h4>
+            <p>Элемент не должен конкурировать с логотипом и основным текстом.</p>
+          </div>
+
+          <div class="graphics-rule">
+            <h4>Целостность формы</h4>
+            <p>Не допускается искажение, изменение пропорций или деформация элемента.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen pictograms-screen" id="pictograms">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2>Пиктограммы</h2>
+
+      <div class="pictograms-card">
+        <div class="pictograms-text-row">
+          <p>Пиктограммы являются частью визуальной системы бренда и используются как вторая группа графических
+            элементов.</p>
+          <p>Они применяются в оформлении фирменных носителей, усиливая визуальный язык бренда и обеспечивая его
+            целостность.</p>
+        </div>
+
+        <div class="pictograms-preview">
+          <img src="assets/images/pictograms.svg" alt="Пиктограммы бренда">
+        </div>
+      </div>
+    </section>
+
+    <section class="screen pictograms-screen" id="pictograms-grid">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2>Построение</h2>
+
+      <div class="pictograms-card">
+        <div class="pictograms-preview grid-bg">
+          <img src="assets/images/pictograms_grid.png" alt="Построение пиктограмм">
+        </div>
+      </div>
+    </section>
+
+    <section class="screen pictograms-screen" id="pictograms-usage">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2>Варианты использования</h2>
+
+      <div class="pictograms-card">
+        <div class="pictogram-tabs">
+          <button class="pictogram-tab is-active" data-picto-bg="light">На светлом фоне</button>
+          <button class="pictogram-tab" data-picto-bg="dark">На темном фоне</button>
+        </div>
+
+        <div class="pictograms-preview" id="pictogramUsagePreview">
+          <img src="assets/images/pictograms-light.svg" alt="Варианты использования пиктограмм">
+        </div>
+      </div>
+    </section>
+
+    <section class="screen photo-style" id="photo-style">
+      <div class="eyebrow">Фирменная графика</div>
+      <h2>Фотостиль</h2>
+
+      <p class="photo-style-lead">
+        Фотостиль бренда «В теме» отражает энергию движения, лёгкость и вовлечённость в активный образ жизни.
+        Изображения передают атмосферу тренировок, поддержки и позитивного взаимодействия.
+      </p>
+
+      <div class="photo-style-card">
+        <div class="photo-slider">
+          <img id="photoSlide" src="assets/images/photo-style-1.jpg" alt="Фотостиль бренда">
+
+          <div class="photo-dots" aria-label="Переключение фото">
+            <button class="photo-dot is-active" data-photo-index="0"></button>
+            <button class="photo-dot" data-photo-index="1"></button>
+            <button class="photo-dot" data-photo-index="2"></button>
+            <button class="photo-dot" data-photo-index="3"></button>
+          </div>
+        </div>
+
+        <div class="photo-style-text">
+          <p id="photoText">
+            В кадре — живые, естественные эмоции и взаимодействие между людьми.
+            Предпочтение отдаётся динамичным сценам, передающим движение, процесс тренировки и командный дух.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="screen section-grid" id="ui-kit" aria-labelledby="visualTitle">
       <div>
-        <div class="eyebrow">03 / Носители бренда</div>
-        <h2 id="carriersTitle">От визитки до соцсетей</h2>
-        <p>Раздел собирает физические, digital и коммуникационные носители: визитка, буклет, договор, шаблоны постов,
-          форма, упаковка, презентация, униформа.</p>
+        <div class="eyebrow">02 | Визуальная система</div>
+        <h2 id="visualTitle">UI Kit</h2>
       </div>
       <div class="cards">
-        <button class="card" data-modal="printModal">
-          <h3>Печатные</h3>
-          <p>Визитки, буклеты, бланки, договоры.</p>
-        </button>
-        <button class="card" data-modal="digitalModal">
-          <h3>Digital</h3>
-          <p>Соцсети, email, UI Kit, баннеры.</p>
-        </button>
-        <button class="card" data-modal="spaceModal">
-          <h3>Среда</h3>
-          <p>Навигация, форма, мерч, упаковка.</p>
-        </button>
+        <a class="visual-card" href="#ui-colors">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Основные цвета</h3>
+          <p>Набор фирменных цветов, используемых для формирования элементов интерфейса</p>
+        </a>
+
+        <a class="visual-card" href="#ui-typography">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Типографика</h3>
+          <p>Шрифтовая система, определяющая иерархию текста</p>
+        </a>
+
+        <a class="visual-card" href="#ui-grid">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Сетка</h3>
+          <p>Система отступов и выравнивания</p>
+        </a>
+
+        <a class="visual-card" href="#ui-buttons">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Кнопки и контроллеры</h3>
+          <p>Интерактивные элементы управления, используемые для взаимодействия с интерфейсом</p>
+        </a>
+
+        <a class="visual-card" href="#logo">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Табы</h3>
+          <p>Компоненты для переключения между разделами контента внутри одного блока</p>
+        </a>
+
+        <a class="visual-card" href="#logo">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Поля ввода и чекбоксы</h3>
+          <p>Элементы форм, предназначенные для ввода данных</p>
+        </a>
+
+        <a class="visual-card" href="#logo">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Навигация</h3>
+          <p>Компоненты, обеспечивающие перемещение по сайту и доступ к его основным разделам</p>
+        </a>
+
+        <a class="visual-card" href="#logo">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Карточки</h3>
+          <p>Универсальные компоненты для структурированного представления информации различного типа</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="screen colors-screen" id="ui-colors" aria-labelledby="colorsTitle">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">02 | Визуальная система | ui kit</div>
+          <h2 id="colorsTitle">Основные цвета</h2>
+          <p>Основная цветовая палитра является ключевым элементом визуальной идентичности бренда и используется во всех
+            коммуникациях. Дополнительные цвета не предусмотрены. Визуальное разнообразие достигается за счёт
+            композиции, типографики и графических элементов.</p>
+        </div>
+      </div>
+      <div class="ui-colors" data-ui-colors>
+        <div class="ui-colors-tabs">
+          <button class="ui-colors-tab is-active" data-ui-tab="main">Основная палитра</button>
+          <button class="ui-colors-tab" data-ui-tab="gray">Градация серого</button>
+          <button class="ui-colors-tab" data-ui-tab="extra">Дополнительные цвета</button>
+        </div>
+
+        <div class="ui-colors-panel is-active" data-ui-panel="main">
+          <div class="ui-colors-grid">
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#F3F3F3"></div>
+              <div class="ui-color-body">
+                <h4>Background</h4>
+                <p>HEX #F3F3F3</p>
+
+              </div>
+            </div>
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#FFFFFF"></div>
+              <div class="ui-color-body">
+                <h4>Section</h4>
+                <p>HEX #FFFFFF</p>
+
+              </div>
+            </div>
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#111111"></div>
+              <div class="ui-color-body">
+                <h4>Section Dark</h4>
+                <p>HEX #111111</p>
+
+              </div>
+            </div>
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#FF7C33"></div>
+              <div class="ui-color-body">
+                <h4>Accent</h4>
+                <p>HEX #FF7C33</p>
+
+              </div>
+            </div>
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#FA4D0B"></div>
+              <div class="ui-color-body">
+                <h4>Hover</h4>
+                <p>HEX #FA4D0B</p>
+
+              </div>
+            </div>
+
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#E33F00"></div>
+              <div class="ui-color-body">
+                <h4>Active</h4>
+                <p>HEX #E33F00</p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ui-colors-panel" data-ui-panel="gray" hidden>
+          <div class="ui-colors-grid">
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#F0F0F0"></div>
+              <div class="ui-color-body">
+                <h4>Black</h4>
+                <p>HEX #F0F0F0</p>
+              </div>
+            </div>
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#D9D9D9"></div>
+              <div class="ui-color-body">
+                <h4>Dark</h4>
+                <p>HEX #D9D9D9</p>
+              </div>
+            </div>
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#C3C3C3"></div>
+              <div class="ui-color-body">
+                <h4>Line</h4>
+                <p>HEX #C3C3C3</p>
+              </div>
+            </div>
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#7E7E7E"></div>
+              <div class="ui-color-body">
+                <h4>Dark</h4>
+                <p>HEX #7E7E7E</p>
+              </div>
+            </div>
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#727272"></div>
+              <div class="ui-color-body">
+                <h4>Dark</h4>
+                <p>HEX #727272</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-colors-panel" data-ui-panel="extra" hidden>
+          <div class="ui-colors-grid">
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#E53935"></div>
+              <div class="ui-color-body">
+                <h4>Error</h4>
+                <p>#E53935</p>
+              </div>
+            </div>
+            <div class="ui-color">
+              <div class="ui-color-top" style="background:#0FA044"></div>
+              <div class="ui-color-body">
+                <h4>Success</h4>
+                <p>#0FA044</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen ui-typography-screen" id="ui-typography">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Типографика</h2>
+
+      <div class="ui-typography-card">
+        <img src="assets/images/ui-typography.png" alt="Типографика UI Kit">
+      </div>
+    </section>
+
+
+    <section class="screen ui-grid-screen" id="ui-grid">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Модульная сетка</h2>
+
+      <p class="ui-grid-desc">
+        Все отступы и размеры элементов построены на модульной системе с базовым шагом 8 px,
+        что обеспечивает визуальную согласованность интерфейса.
+      </p>
+
+      <!-- Desktop -->
+      <div class="ui-grid-card">
+        <div class="ui-grid-inner">
+
+          <div class="ui-grid-text">
+            <h3>Desktop</h3>
+            <ul>
+              <li>Столбцов: 12 (118px)</li>
+              <li>Ширина: 1920 px</li>
+              <li>Margin: 160 px</li>
+              <li>Gutter: 16 px</li>
+            </ul>
+          </div>
+
+          <div class="ui-grid-image">
+            <img src="assets/images/grid-desktop.png" alt="Сетка desktop">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="ui-grid-card">
+        <div class="ui-grid-inner">
+
+          <div class="ui-grid-text">
+            <h3>Mobile</h3>
+            <ul>
+              <li>Столбцов: 4 (78px)</li>
+              <li>Ширина: 375 px</li>
+              <li>Margin: 8 px</li>
+              <li>Gutter: 16 px</li>
+            </ul>
+          </div>
+
+          <div class="ui-grid-image">
+            <img src="assets/images/grid-mobile.png" alt="Сетка mobile">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="screen ui-buttons-screen" id="ui-buttons">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Кнопки</h2>
+
+      <div class="ui-btn-card">
+        <div class="ui-btn-col">
+          <h3>Основная кнопка</h3>
+          <div class="ui-btn-row"><span>Default</span><button class="ui-btn primary">Button Title</button></div>
+          <div class="ui-btn-row"><span>Hover</span><button class="ui-btn primary hover">Button Title</button></div>
+          <div class="ui-btn-row"><span>Active</span><button class="ui-btn primary active">Button Title</button></div>
+          <div class="ui-btn-row"><span>Disabled</span><button class="ui-btn disabled">Button Title</button></div>
+        </div>
+
+        <div class="ui-btn-col">
+          <h3>Основная кнопка с иконкой</h3>
+          <div class="ui-btn-row"><span>Default</span><button class="ui-btn-combo primary"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Hover</span><button class="ui-btn-combo hover"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Active</span><button class="ui-btn-combo active"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Disabled</span><button class="ui-btn-combo disabled"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+        </div>
+
+        <p>Все кнопки имеют минимальную высоту 48 px. Ширина адаптивна и зависит от контекста.</p>
+      </div>
+
+      <div class="ui-btn-card">
+        <div class="ui-btn-col">
+          <h3>Второстепенная кнопка</h3>
+          <div class="ui-btn-row"><span>Default</span><button class="ui-btn secondary">Button Title</button></div>
+          <div class="ui-btn-row"><span>Hover</span><button class="ui-btn primary">Button Title</button></div>
+          <div class="ui-btn-row"><span>Active</span><button class="ui-btn primary active">Button Title</button></div>
+          <div class="ui-btn-row"><span>Disabled</span><button class="ui-btn disabled">Button Title</button></div>
+        </div>
+
+        <div class="ui-btn-col">
+          <h3>Второстепенная кнопка с иконкой</h3>
+          <div class="ui-btn-row"><span>Default</span><button class="ui-btn-combo secondary"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Hover</span><button class="ui-btn-combo hover"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Active</span><button class="ui-btn-combo active"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+          <div class="ui-btn-row"><span>Disabled</span><button class="ui-btn-combo disabled"><b>Button
+                Title</b><i><img src="assets/images/arrow-up-right.svg" alt=""></i></button></div>
+        </div>
+
+        <p>При наведении используется акцентный цвет. Цвет кнопки может меняться на белый в зависимости от фона.</p>
+      </div>
+
+      <div class="ui-btn-card single">
+        <h3>Ghost button</h3>
+        <div class="ui-btn-row"><span>Default</span><button class="ui-btn ghost">Button Title</button></div>
+        <div class="ui-btn-row"><span>Hover</span><button class="ui-btn primary hover">Button Title</button></div>
+        <div class="ui-btn-row"><span>Active</span><button class="ui-btn primary active">Button Title</button></div>
+        <div class="ui-btn-row"><span>Disabled</span><button class="ui-btn disabled">Button Title</button></div>
+        <p>Контурная кнопка используется для второстепенных действий и не конкурирует с основной кнопкой.</p>
+      </div>
+
+      <div class="ui-icon-card">
+        <h3>Icon button</h3>
+
+        <!-- Default -->
+        <div class="ui-icon-row">
+          <span>Default</span>
+
+          <button class="icon-btn black">
+            <img src="assets/images/arrow-up-right.svg">
+          </button>
+
+          <button class="icon-btn outline">
+            <img src="assets/images/arrow-up-right.svg" style="filter: invert(1);">
+          </button>
+
+          <button class="icon-btn black">
+            <img src="assets/images/arrow-left.svg">
+          </button>
+
+          <button class="icon-btn black">
+            <img src="assets/images/arrow-right.svg">
+          </button>
+        </div>
+
+        <!-- Hover -->
+        <div class="ui-icon-row">
+          <span>Hover</span>
+
+          <button class="icon-btn orange">
+            <img src="assets/images/arrow-up-right.svg">
+          </button>
+
+          <button class="icon-btn orange">
+            <img src="assets/images/arrow-up-right.svg">
+          </button>
+
+          <button class="icon-btn orange">
+            <img src="assets/images/arrow-left.svg">
+          </button>
+
+          <button class="icon-btn orange">
+            <img src="assets/images/arrow-right.svg">
+          </button>
+        </div>
+
+        <!-- Active -->
+        <div class="ui-icon-row">
+          <span>Active</span>
+
+          <button class="icon-btn active">
+            <img src="assets/images/arrow-up-right.svg">
+          </button>
+
+          <button class="icon-btn active">
+            <img src="assets/images/arrow-up-right.svg">
+          </button>
+
+          <button class="icon-btn active">
+            <img src="assets/images/arrow-left.svg">
+          </button>
+
+          <button class="icon-btn active">
+            <img src="assets/images/arrow-right.svg">
+          </button>
+        </div>
+
+        <!-- Disabled -->
+        <div class="ui-icon-row">
+          <span>Disabled</span>
+
+          <button class="icon-btn disabled"><img src="assets/images/arrow-up-right.svg"></button>
+          <button class="icon-btn disabled"><img src="assets/images/arrow-up-right.svg"></button>
+          <button class="icon-btn disabled"><img src="assets/images/arrow-left.svg"></button>
+          <button class="icon-btn disabled"><img src="assets/images/arrow-right.svg"></button>
+        </div>
+
+        <p>
+          Кнопка с иконкой используется в карточках для перехода и перелистывания контента.
+        </p>
+      </div>
+    </section>
+
+    <section class="screen ui-tabs-screen" id="ui-tabs">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Табы</h2>
+      <p class="ui-tabs-lead">Табы используются для переключения между разделами контента внутри одного экрана.</p>
+
+      <div class="ui-tabs-card">
+        <div class="ui-tabs-demo" data-ui-tabs-demo>
+          <button class="is-active" type="button">Для меня</button>
+          <button type="button">Услуги</button>
+          <button type="button">Мои оплаты</button>
+          <button type="button">Настройки</button>
+          <button type="button">Программа лояльности</button>
+        </div>
+
+        <div class="ui-review-tabs" data-ui-tabs-demo>
+          <button class="is-active" type="button">Все отзывы</button>
+          <button type="button">
+            <img src="assets/images/yandex-icon.svg" alt="">
+            5.0
+          </button>
+
+          <button type="button">
+            <img src="assets/images/2gis-icon.svg" alt="">
+            4.9
+          </button>
+        </div>
+
+        <p class="ui-tabs-note">
+          Активная вкладка визуально выделяется для обозначения текущего состояния. Цвет активного таба зависит от фона:
+          на светлом фоне используется фирменный оранжевый, на тёмном — светлый или белый.
+        </p>
+      </div>
+    </section>
+
+    <section class="screen ui-fields-screen" id="ui-fields">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Поля ввода и чекбоксы</h2>
+
+      <div class="ui-fields-card">
+        <div class="ui-fields-col">
+          <h3>Поле для ввода данных</h3>
+
+          <div class="ui-field-row">
+            <span>Default</span>
+            <input class="ui-input" type="text" placeholder="Ваше имя">
+          </div>
+
+          <div class="ui-field-row">
+            <span>Hover</span>
+            <input class="ui-input is-hover" type="text" placeholder="Ваше имя">
+          </div>
+
+          <div class="ui-field-row">
+            <span>Active</span>
+            <input class="ui-input is-active" type="text" placeholder="Ваше имя">
+          </div>
+
+          <div class="ui-field-row">
+            <span>Disabled</span>
+            <input class="ui-input" type="text" placeholder="Ваше имя" disabled>
+          </div>
+        </div>
+
+        <div class="ui-fields-col">
+          <h3>Чекбокс</h3>
+
+          <label class="ui-checkbox-row">
+            <span>Unselected</span>
+            <input type="checkbox">
+            <i></i>
+          </label>
+
+          <label class="ui-checkbox-row">
+            <span>Selected</span>
+            <input type="checkbox" checked>
+            <i></i>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="ui-nav-screen">
+      <div class="ui-nav-head">
+        <div class="eyebrow">02 | ВИЗУАЛЬНАЯ СИСТЕМА | UI KIT</div>
+        <h2>НАВИГАЦИЯ</h2>
+        <p>Хэдер является основным навигационным элементом сайта и используется для доступа к ключевым разделам.</p>
+      </div>
+
+      <div class="ui-nav-card">
+
+        <!-- Desktop -->
+        <div class="ui-nav-block">
+          <h3>Desktop версия</h3>
+          <div class="ui-nav-preview">
+            <img src="assets/images/desktop-header.png" alt="Desktop header">
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="ui-nav-block">
+          <h3>Mobile</h3>
+          <div class="ui-nav-preview ui-nav-preview--small">
+            <img src="assets/images/mobile-header.png" alt="Mobile header">
+          </div>
+        </div>
+
+        <!-- Button states -->
+        <div class="header-button-states">
+          <h3>Состояние кнопок в хэдере</h3>
+
+          <div class="header-btn-row">
+            <span>Default</span>
+            <button class="header-text-btn text-default">Button Title</button>
+          </div>
+
+          <div class="header-btn-row">
+            <span>Hover</span>
+            <button class="header-text-btn text-hover">Button Title</button>
+          </div>
+
+          <div class="header-btn-row">
+            <span>Active</span>
+            <button class="header-text-btn text-active">Button Title</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="screen ui-cards-screen" id="ui-cards">
+      <div class="eyebrow">02 | Визуальная система | UI Kit</div>
+      <h2>Карточки</h2>
+
+      <p class="ui-cards-lead">
+        Карточки используются для представления разных типов информации на сайте: тарифов, тренеров, отзывов и
+        расписания.
+        Каждый тип карточек имеет единый принцип построения и визуального оформления.
+      </p>
+
+      <div class="ui-cards-block">
+        <h3>Информационные карточки</h3>
+        <img src="assets/images/ui-info-cards.png" alt="Информационные карточки">
+      </div>
+
+      <div class="ui-cards-block">
+        <h3>Карточки тарифов</h3>
+        <img src="assets/images/ui-tariff-cards.png" alt="Карточки тарифов">
+      </div>
+
+      <div class="ui-cards-block">
+        <h3>Карточки тренеров</h3>
+        <img src="assets/images/ui-trainer-cards.png" alt="Карточки тренеров">
+      </div>
+
+      <div class="ui-cards-block">
+        <h3>Карточки расписания</h3>
+        <img src="assets/images/ui-schedule-cards.png" alt="Карточки расписания">
+      </div>
+
+      <div class="ui-cards-block">
+        <h3>Карточки отзывов</h3>
+        <img src="assets/images/ui-review-cards.png" alt="Карточки отзывов">
+      </div>
+    </section>
+
+    <section class="screen section-grid" id="carriers" aria-labelledby="visualTitle">
+      <div>
+        <div class="eyebrow">03 | Фирменные носители</div>
+        <h2 id="visualTitle">Носители фирменного стиля</h2>
+      </div>
+      <div class="cards">
+        <a class="visual-card" href="#ui-colors">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Правила оформления носителей</h3>
+          <p>Принципы применения фирменного стиля на различных носителях и рекомендации по их оформлению</p>
+        </a>
+
+        <a class="visual-card" href="#ui-typography">
+          <span class="visual-card-icon">
+            <img src="assets/images/arrow.svg" alt="">
+          </span>
+
+          <h3>Носители</h3>
+          <p>Примеры применения фирменного стиля на внутренних и внешних носителях бренда</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="screen carrier-rules-screen" id="carrier-rules">
+      <div class="eyebrow">03 | Носители бренда</div>
+      <h2>Правила оформления носителей</h2>
+
+      <p class="carrier-rules-lead">
+        Носители фирменного стиля играют ключевую роль в коммуникации с аудиторией и формировании узнаваемого образа
+        бренда.
+        Через них передаётся основная информация и поддерживается единый визуальный язык компании.
+      </p>
+
+      <div class="carrier-rules-card">
+        <div>
+          <h3>Правила оформления внутренних носителей:</h3>
+          <p>
+            Клубные карты, браслеты, форма сотрудников, навигация внутри клуба и другая атрибутика оформляются
+            с соблюдением фирменных цветов, типографики и графических элементов.
+          </p>
+          <p>
+            Важно поддерживать единый визуальный стиль и достаточный контраст элементов для удобства восприятия
+            в пространстве клуба.
+          </p>
+        </div>
+
+        <div>
+          <h3>Правила оформления внешних носителей:</h3>
+          <p>
+            Рекламные материалы, вывески, полиграфия и цифровые площадки оформляются в соответствии с фирменной
+            айдентикой и адаптируются под формат носителя.
+          </p>
+          <p>
+            При разработке необходимо учитывать читаемость, масштабирование элементов и выразительность визуального
+            образа бренда.
+          </p>
+        </div>
       </div>
     </section>
 

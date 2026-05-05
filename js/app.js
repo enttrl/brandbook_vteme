@@ -11,7 +11,6 @@ $$('.grid-toggle').forEach(btn => btn.addEventListener('click', () => {
 }));
 
 const copyStatus = $('#copyStatus'); $$('.swatch').forEach(s => s.addEventListener('click', async () => { const hex = s.dataset.hex; try { await navigator.clipboard.writeText(hex); copyStatus.textContent = `Скопировано: ${hex}`; } catch { copyStatus.textContent = `Код цвета: ${hex}`; } }));
-const range = $('#fontRange'), preview = $('#typePreview'), value = $('#fontSizeValue'); range.addEventListener('input', () => { preview.style.fontSize = range.value + 'px'; value.textContent = range.value });
 $('#themeToggle').addEventListener('click', () => document.body.classList.toggle('dark'));
 
 const carriers = [
@@ -115,5 +114,218 @@ document.querySelectorAll('[data-accordion] .acc-button').forEach(button => {
         panel.classList.add('is-open');
       });
     }
+  });
+});
+
+document.querySelectorAll('.copy-color').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const hex = button.dataset.hex;
+
+    try {
+      await navigator.clipboard.writeText(hex);
+      button.textContent = 'Скопировано';
+      setTimeout(() => button.textContent = 'Копировать', 1200);
+    } catch {
+      button.textContent = hex;
+    }
+  });
+});
+
+const typeTabs = document.querySelectorAll('.type-tab');
+const typePanels = document.querySelectorAll('[data-type-panel]');
+
+typeTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.fontTab;
+
+    typeTabs.forEach((item) => item.classList.remove('is-active'));
+    tab.classList.add('is-active');
+
+    typePanels.forEach((panel) => {
+      panel.hidden = panel.dataset.typePanel !== target;
+    });
+  });
+});
+
+const onderSize = document.getElementById('onderSize');
+const onderLine = document.getElementById('onderLine');
+const onderPreview = document.getElementById('onderPreview');
+
+onderSize.addEventListener('input', () => {
+  onderPreview.style.fontSize = `${onderSize.value}px`;
+});
+
+onderLine.addEventListener('input', () => {
+  onderPreview.style.lineHeight = onderLine.value;
+});
+
+const interSize = document.getElementById('interSize');
+const interLine = document.getElementById('interLine');
+const interWeight = document.getElementById('interWeight');
+const interPreview = document.getElementById('interPreview');
+const interWeightValue = document.getElementById('interWeightValue');
+
+interSize.addEventListener('input', () => {
+  interPreview.style.fontSize = `${interSize.value}px`;
+});
+
+interLine.addEventListener('input', () => {
+  interPreview.style.lineHeight = interLine.value;
+});
+
+interWeight.addEventListener('input', () => {
+  interPreview.style.fontWeight = interWeight.value;
+  interWeightValue.textContent = interWeight.value;
+});
+
+document.querySelectorAll('input[type="range"]').forEach(range => {
+  const update = () => {
+    const percent = (range.value - range.min) / (range.max - range.min) * 100;
+    range.style.setProperty('--progress', percent + '%');
+  };
+
+  range.addEventListener('input', update);
+  update();
+});
+
+
+const graphicPreview = document.getElementById('graphicPreview');
+const previewBox = document.querySelector('.graphics-preview');
+
+document.querySelectorAll('[data-graphic]').forEach((button) => {
+  button.addEventListener('click', () => {
+
+    document.querySelectorAll('[data-graphic]').forEach((btn) => {
+      btn.classList.remove('is-active');
+    });
+
+    button.classList.add('is-active');
+
+    const images = {
+      orange: 'assets/images/graphic_element.png',
+      white: 'assets/images/graphic_element_white.png',
+      outline: 'assets/images/graphic_element_stroke.png'
+    };
+
+    graphicPreview.src = images[button.dataset.graphic];
+
+    // 🔥 ВОТ ЭТО НОВОЕ — меняем фон
+    if (button.dataset.graphic === 'white' || button.dataset.graphic === 'outline') {
+      previewBox.style.background = '#ff7a2f'; // оранжевый
+    } else {
+      previewBox.style.background = '#fff'; // белый
+    }
+  });
+});
+
+const pictogramUsagePreview = document.getElementById('pictogramUsagePreview');
+
+document.querySelectorAll('[data-picto-bg]').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('[data-picto-bg]').forEach((btn) => {
+      btn.classList.remove('is-active');
+    });
+
+    button.classList.add('is-active');
+
+    if (button.dataset.pictoBg === 'dark') {
+      pictogramUsagePreview.classList.add('is-dark');
+      pictogramUsagePreview.querySelector('img').src = 'assets/images/pictograms-dark.svg';
+    } else {
+      pictogramUsagePreview.classList.remove('is-dark');
+      pictogramUsagePreview.querySelector('img').src = 'assets/images/pictograms-light.svg';
+    }
+  });
+});
+
+const photoSlide = document.getElementById('photoSlide');
+const photoText = document.getElementById('photoText');
+const photoDots = document.querySelectorAll('.photo-dot');
+
+const photoSlides = [
+  {
+    img: 'assets/images/photo-style-1.jpg',
+    text: 'В кадре — живые, естественные эмоции и взаимодействие между людьми. Предпочтение отдаётся динамичным сценам, передающим движение, процесс тренировки и командный дух. Допускается сочетание динамичных кадров с более спокойными портретными изображениями.'
+  },
+  {
+    img: 'assets/images/photo-style-2.jpg',
+    text: 'Используются средние и крупные планы, а также кадры с эффектом движения. Допускается лёгкое размытие для передачи динамики. Композиции могут быть как естественными (в пространстве зала), так и более графичными — с однотонным фоном.'
+  },
+  {
+    img: 'assets/images/photo-style-3.jpg',
+    text: 'Визуальная среда строится на сочетании нейтральных и тёплых оттенков с акцентом на фирменный оранжевый цвет. Допускается использование однотонных цветных фонов, усиливающих графичность и выразительность изображений.'
+  },
+  {
+    img: 'assets/images/photo-style-4.jpg',
+    text: 'Фотографии могут сочетаться с фирменной графикой и элементом «Импульс», усиливая динамику и формируя целостный визуальный стиль.'
+  }
+];
+
+let currentPhoto = 0;
+let photoTimer;
+
+function showPhoto(index) {
+  currentPhoto = index;
+
+  photoSlide.style.opacity = '0';
+
+  setTimeout(() => {
+    photoSlide.src = photoSlides[index].img;
+    photoText.textContent = photoSlides[index].text;
+
+    photoDots.forEach((dot) => dot.classList.remove('is-active'));
+    photoDots[index].classList.add('is-active');
+
+    photoSlide.style.opacity = '1';
+  }, 180);
+}
+
+function startPhotoSlider() {
+  photoTimer = setInterval(() => {
+    const next = (currentPhoto + 1) % photoSlides.length;
+    showPhoto(next);
+  }, 5000);
+}
+
+photoDots.forEach((dot) => {
+  dot.addEventListener('click', () => {
+    clearInterval(photoTimer);
+    showPhoto(Number(dot.dataset.photoIndex));
+    startPhotoSlider();
+  });
+});
+
+if (photoSlide && photoText && photoDots.length) {
+  startPhotoSlider();
+}
+
+
+document.querySelectorAll('[data-ui-colors]').forEach((wrap) => {
+  const tabs = wrap.querySelectorAll('[data-ui-tab]');
+  const panels = wrap.querySelectorAll('[data-ui-panel]');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const id = tab.dataset.uiTab;
+
+      tabs.forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      panels.forEach(panel => {
+        const show = panel.dataset.uiPanel === id;
+        panel.hidden = !show;
+      });
+    });
+  });
+});
+
+document.querySelectorAll('[data-ui-tabs-demo]').forEach((tabs) => {
+  const buttons = tabs.querySelectorAll('button');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      buttons.forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+    });
   });
 });
