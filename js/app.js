@@ -717,3 +717,22 @@ pictogramTabs.forEach((tab) => {
   );
   screens.forEach((screen) => visibleObserver.observe(screen));
 })();
+
+
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
