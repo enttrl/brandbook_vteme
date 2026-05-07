@@ -149,6 +149,7 @@ video {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  padding-left: 12px;
 }
 
 .brand-logo {
@@ -1132,7 +1133,7 @@ h3 {
   border-radius: 999px;
   background: #111111;
   color: #ffffff;
-  padding: 18px 42px;
+  padding: 16px 32px;
   font-size: 22px;
   font-weight: 700;
   cursor: pointer;
@@ -1147,9 +1148,7 @@ h3 {
   width: min(1500px, 92vw);
 }
 
-.carrier-modal-card.layout-mode .carrier-modal-image {
-  height: 900px;
-}
+
 
 .carrier-modal-card.layout-mode .carrier-modal-image img {
   width: 100%;
@@ -1182,7 +1181,7 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(1.4);
+
   }
 }
 
@@ -1213,7 +1212,7 @@ h3 {
 }
 
 .carrier-modal-image {
-  height: 560px;
+  height: auto;
   border-radius: 18px;
   background: #ffffff;
   overflow: hidden;
@@ -2085,7 +2084,23 @@ input[type="range"]::-webkit-slider-thumb {
 
   .graphic-tab {
     min-width: auto;
-    flex: 1;
+  }
+  [role=tab] {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+  .visual-card h3 {
+    font-size: 20px;
+  }
+  .color-preview {
+    border-radius: 16px;
+  }
+  .color-card {
+    padding: 16px;
   }
 }
 
@@ -2188,7 +2203,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   .pictogram-tab {
     min-width: auto;
-    flex: 1;
+   
   }
 }
 
@@ -2200,14 +2215,14 @@ input[type="range"]::-webkit-slider-thumb {
 .photo-style-lead {
   max-width: 1500px;
   margin: 28px 0 42px;
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .photo-style-card {
   background: #fff;
   border-radius: 24px;
-  padding: 36px;
+  padding: 24px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, .08);
 
   display: grid;
@@ -2751,7 +2766,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .ui-icon-card {
   background: #fff;
-  padding: 32px;
+  padding: 24px;
   border-radius: 24px;
   margin-top: 32px;
 }
@@ -2865,7 +2880,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .ui-tabs-lead {
   margin: 20px 0 40px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .ui-tabs-card {
@@ -3106,8 +3121,8 @@ input[type="range"]::-webkit-slider-thumb {
 
 .ui-nav-head p {
   max-width: 900px;
-  font-size: 22px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .ui-nav-card {
@@ -3835,7 +3850,15 @@ body.dark .toc a.active {
 .toc a[href="#logo-clearspace"],
 .toc a[href="#logo-colors"],
 .toc a[href="#logo-sizes"],
-.toc a[href="#logo-misuse"] {
+.toc a[href="#logo-misuse"],
+.toc a[href="#ui-colors"],
+.toc a[href="#ui-typography"],
+.toc a[href="#ui-grid"],
+.toc a[href="#ui-buttons"],
+.toc a[href="#ui-tabs"],
+.toc a[href="#ui-fields"],
+.toc a[href="#ui-nav"],
+.toc a[href="#ui-cards"] {
   padding-left: 20px;
   font-size: 14px;
   opacity: .92
@@ -4313,7 +4336,6 @@ canvas {
 
   .logo-intro-card,
   .visual-card,
-  .color-card,
   .type-card,
   .ui-typography-card,
   .ui-grid-card,
@@ -4687,7 +4709,7 @@ section:not(.contents-screen) h2 {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   html {
     scroll-snap-type: y proximity;
   }
@@ -4750,10 +4772,24 @@ section:not(.contents-screen) h2 {
   .acc-panel.is-open {
     max-height: none !important;
   }
+  .ui-colors-tabs {
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 420px) {
-
+@media (max-width: 480px) {
+  .carrier-counter {
+    font-size: 16px;
+  }
+  .pictogram-tabs {
+    flex-direction: column;
+  }
+  .ui-colors-tabs {
+    flex-direction: column;
+  }
+  .graphics-tabs {
+    flex-direction: column;
+  }
   .screen,
   .ui-cards-screen,
   .carriers-screen {
@@ -4782,5 +4818,26 @@ section:not(.contents-screen) h2 {
   .typography-preview {
     width: 100%;
     max-width: 100%;
+  }
+}
+@media (max-width: 375px) {
+ section:not(.contents-screen) h1,
+  section:not(.contents-screen) h2 {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .carrier-counter-buttons {
+    gap: 16px;
+  }
+  .carrier-counter {
+    font-size: 14px;
+  }
+  .carrier-layout-btn {
+    height: 48px;
+    font-size: 16px;
+    width: 100%;
   }
 }
