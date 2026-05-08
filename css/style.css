@@ -759,7 +759,7 @@ h3 {
 
 .carriers-head p {
   max-width: 620px;
-  color: var(--muted);
+  color: #000000;
   margin-bottom: 0
 }
 
@@ -1117,6 +1117,26 @@ h3 {
   line-height: 1;
   cursor: pointer;
   flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+  background: #ff6b2c;
+
+  cursor: pointer;
+  flex-shrink: 0;
+
+  padding: 0;
+}
+
+.carrier-modal-close img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .carrier-modal-layout {
@@ -2085,6 +2105,7 @@ input[type="range"]::-webkit-slider-thumb {
   .graphic-tab {
     min-width: auto;
   }
+
   [role=tab] {
     font-size: 18px;
     font-weight: 600;
@@ -2093,12 +2114,15 @@ input[type="range"]::-webkit-slider-thumb {
   .button {
     font-size: 18px;
   }
+
   .visual-card h3 {
     font-size: 20px;
   }
+
   .color-preview {
     border-radius: 16px;
   }
+
   .color-card {
     padding: 16px;
   }
@@ -2203,7 +2227,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   .pictogram-tab {
     min-width: auto;
-   
+
   }
 }
 
@@ -3080,7 +3104,7 @@ input[type="range"]::-webkit-slider-thumb {
 .ui-checkbox-row input:checked+i::after {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 10px;
   top: 5px;
   width: 8px;
   height: 13px;
@@ -3876,6 +3900,7 @@ body.dark .logo-intro-text p {
 
 @media (max-width:1100px) {
   .logo-intro-text {
+    font-size: 16px;
     max-width: 820px;
     order: 2
   }
@@ -3976,13 +4001,13 @@ h1 {
 
 h3 {
   font-size: clamp(18px, 1.6vw, 24px);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 p,
 .lead {
   font-size: clamp(16px, 1.2vw, 20px);
-  line-height: 1.45;
+  line-height: 1.2;
 }
 
 .eyebrow {
@@ -4772,6 +4797,7 @@ section:not(.contents-screen) h2 {
   .acc-panel.is-open {
     max-height: none !important;
   }
+
   .ui-colors-tabs {
     flex-direction: column;
   }
@@ -4781,15 +4807,19 @@ section:not(.contents-screen) h2 {
   .carrier-counter {
     font-size: 16px;
   }
+
   .pictogram-tabs {
     flex-direction: column;
   }
+
   .ui-colors-tabs {
     flex-direction: column;
   }
+
   .graphics-tabs {
     flex-direction: column;
   }
+
   .screen,
   .ui-cards-screen,
   .carriers-screen {
@@ -4800,6 +4830,131 @@ section:not(.contents-screen) h2 {
   .hero {
     padding-left: 16px !important;
     padding-right: 16px !important;
+  }
+
+  .audience-card {
+    padding: 16px;
+  }
+
+  .audience-card h3 {
+    font-size: 24px;
+  }
+
+  .audience-card .age {
+    font-size: 20px;
+  }
+
+  .audience-card p {
+    font-size: 16px;
+  }
+
+  .logo-panel aside {
+    padding-left: 0px;
+  }
+
+  .logo-panel aside p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .logo-panel>.brand-lockup {
+    min-height: 250px;
+  }
+
+  .color-info {
+    padding: 0px;
+    padding-top: 8px;
+  }
+
+  .type-controls {
+    padding: 16px;
+  }
+
+  .type-description {
+    padding: 16px;
+  }
+
+  .graphics-rule p {
+    font-size: 16px;
+  }
+
+  .pictograms-text-row p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .photo-style-lead {
+    font-size: 16px;
+  }
+
+  .ui-btn-card.single h3,
+  .ui-btn-col h3 {
+    font-size: 20px;
+  }
+
+  .ui-btn-card {
+    gap: 48px;
+  }
+
+  .ui-btn-card.single {
+    gap: 0px;
+  }
+
+  .ui-tabs-lead {
+    font-size: 16px;
+  }
+
+  .ui-tabs-note {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .ui-fields-col h3,
+  .carrier-rules-card h3 {
+    font-size: 20px;
+  }
+
+  .ui-field-row span {
+    font-size: 18px;
+  }
+
+  .ui-nav-head p {
+    font-size: 16px;
+  }
+
+  .header-btn-row>span {
+    font-size: 18px;
+  }
+
+  .ui-cards-lead {
+    font-size: 16px;
+  }
+
+  .carrier-rules-lead,
+  .carrier-rules-card p,
+  .carriers-head p,
+  .carrier-modal-info p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .carrier-rules-card {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .carrier-modal-type {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .carrier-modal-top {
+    margin-bottom: 24px;
+  }
+
+  .carrier-modal-close {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -4820,21 +4975,27 @@ section:not(.contents-screen) h2 {
     max-width: 100%;
   }
 }
+
 @media (max-width: 375px) {
- section:not(.contents-screen) h1,
+
+  section:not(.contents-screen) h1,
   section:not(.contents-screen) h2 {
     font-size: 14px !important;
     line-height: 1.9 !important;
   }
+
   h2 {
     font-size: 14px;
   }
+
   .carrier-counter-buttons {
     gap: 16px;
   }
+
   .carrier-counter {
     font-size: 14px;
   }
+
   .carrier-layout-btn {
     height: 48px;
     font-size: 16px;
